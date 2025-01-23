@@ -1,0 +1,441 @@
+
+/* =============================================主内容区域样式============================================= */
+/* 聊天容器 */
+.chat-container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 48px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    margin-left: 80px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    transition: margin-right 0.3s ease;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.conversation-title {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+}
+
+/* 聊天消息区域 */
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px 0;
+    scroll-behavior: smooth;
+}
+
+/* 消息基础样式 */
+.message {
+    display: flex;
+    gap: 16px;
+    padding: 0 10%;
+    margin-bottom: 24px;
+}
+
+.chat-messages .ai-message .avatar  {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.message-content {
+    max-width: 85%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* 输入区域样式 */
+.input-area {
+    padding: 16px 0;
+    margin-bottom: 16px;
+}
+
+/* 输入框容器样式 */
+.input-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+/* 主输入框样式 */
+.main-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    padding: 8px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.main-input:focus {
+    outline: none;
+}
+
+
+/* 自定义占位符文本 */
+.placeholder {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 14px;
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity 0.2s;
+}
+
+/* 当输入框获得焦点或有内容时隐藏占位符 */
+.main-input:focus + .placeholder,
+.main-input:not(:placeholder-shown) + .placeholder {
+    opacity: 0;
+}
+
+/* 输入框容器整体样式 */
+.input-container {
+    background-color: rgba(39, 39, 42, 0.8);
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin: 0 auto;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 确保输入框在获得焦点时不显示默认placeholder */
+.main-input::placeholder {
+    color: transparent;
+}
+
+/* 联网搜索开关样式 */
+.search-toggle {
+    min-width: 100px;
+}
+
+.toggle-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.toggle-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 隐藏原始checkbox */
+.toggle-button input {
+    display: none;
+}
+
+/* 开关轨道 */
+.toggle-track {
+    position: relative;
+    width: 28px;
+    height: 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+/* 开关圆点 */
+.toggle-dot {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/* 选中状态样式 */
+.toggle-button input:checked + .toggle-track {
+    background-color: #4B96F3;
+}
+
+.toggle-button input:checked + .toggle-track .toggle-dot {
+    transform: translateX(12px);
+    background-color: white;
+}
+
+.toggle-text {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+    user-select: none;
+}
+
+/* 右侧按钮组 */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.action-btn {
+    background: transparent;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.action-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.action-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: rgba(255, 255, 255, 0.6);
+}
+
+/* 特定按钮的图标颜色 */
+.cube-icon {
+    fill: rgba(255, 255, 255, 0.6);
+}
+
+.clip-icon {
+    fill: rgba(255, 255, 255, 0.6);
+}
+
+.send-icon {
+    fill: rgba(255, 255, 255, 0.6);
+}
+
+.send-icon.active {
+    fill: rgb(166, 194, 250); /* 激活时的颜色 */
+}
+
+/* 底部文字样式 */
+.footer-text {
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 8px;
+}
+
+/* 更新图标样式 */
+.menu-item svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.6);
+    stroke-width: 2;
+}
+
+.menu-item:first-child {
+    padding: 8px 0;
+    margin-bottom: 8px;
+}
+
+.menu-item:first-child img {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+}
+
+.menu-item:hover svg {
+    opacity: 1;
+}
+
+.menu-item.active svg {
+    opacity: 1;
+}
+
+/* AI消息样式 */
+.ai-message {
+    display: flex;
+    flex-wrap: wrap; /* 允许子元素换行 */
+    align-items: flex-start; /* 子元素顶部对齐 */
+}
+
+.ai-message .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.ai-message .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 用户消息样式 */
+.user-message {
+    flex-direction: row-reverse;
+}
+
+.user-message .message-content {
+    background-color: #4B96F3;
+    color: #fff;
+}
+
+/* 用户文本样式 */
+.user-text {
+    margin: 0;
+    color: #fff;
+}
+
+/* AI消息气泡样式 */
+.ai-message .message-content {
+    flex: 1; /* 占据剩余空间 */
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0;
+}
+
+/* message-time 样式 */
+.message-time {
+    width: 100%; /* 占据整行 */
+    font-size: 12px;
+    color: #888;
+    text-align: right;
+}
+
+/* message-recommend 样式 */
+.message-recommend {
+    width: 100%; /* 占据整行 */
+    display: block;
+    justify-content: space-between;
+}
+
+.recommend_1, .recommend_2, .recommend_3 {
+    flex: 1; /* 子元素平分空间 */
+    display: block;
+    width: 240px;
+    height: 16px;
+    padding: 12px;
+    border-radius: 5px;
+    background-color: #60595980;
+    text-align: left;
+    font-size: 14px;
+    color: #fff;
+    margin-left: 80px;
+    margin-bottom: 5px; /* 添加右边距 */
+    transition: background-image 0.5s ease;
+}
+/* 移除最后一个盒子的右边距 */
+.recommend_3 {
+    margin-bottom: 0;
+}
+
+.recommend_1:hover, .recommend_2:hover, .recommend_3:hover {
+    background-color: #7b6a6a;
+    cursor: pointer;
+}
+
+/* 定义recommend动画 */
+@keyframes gradientAnimation {
+    from {
+      background-position: 0% 0%;
+    }
+    to {
+      background-position: 100% 100%;
+    }
+  }
+  
+/* 动画效果的样式 */
+.recommend-animation {
+    background-image: linear-gradient(to bottom right, rgba(119, 114, 114, 0.5), rgba(131, 131, 241, 0.53));
+    background-size: 200% 200%;
+    animation: gradientAnimation 2s ease-in-out infinite;
+}
+
+
+
+/* 消息操作按钮 */
+.message-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.ai-message:hover .message-actions {
+    opacity: 1;
+}
+
+.action-btn {
+    padding: 4px 8px;
+    border: none;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+    transition: all 0.2s;
+}
+
+.action-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* 段落间距 */
+.message-content p {
+    margin: 0;
+}
+
+.message-content p + p {
+    margin-top: 8px;
+}
+
+/* 滚动条样式 */
+.chat-messages::-webkit-scrollbar {
+    width: 0px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background-color: transparent;
+}

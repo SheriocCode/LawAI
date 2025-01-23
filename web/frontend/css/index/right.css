@@ -1,0 +1,272 @@
+/* =============================================工作台样式============================================= */
+
+/* 工作台整体布局容器 */
+.workspace {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+/* 工作台展开时的主内容区域 */
+.workspace-open .main-content {
+    margin-right: 400px;
+}
+
+/* 确保聊天内容区域可滚动 */
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px 0;
+    scroll-behavior: smooth;
+}
+
+/* 输入区域固定在底部 */
+.input-area {
+    flex-shrink: 0;
+    padding: 16px 0;
+}
+
+/* 工作台侧边栏 */
+.workspace-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100vh;
+    background-color: rgba(39, 39, 42, 0.95);
+    backdrop-filter: blur(16px);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    transition: right 0.3s ease;
+    z-index: 99;
+}
+
+/* 工作台展开状态 */
+.workspace-sidebar.open {
+    right: 0;
+}
+
+
+/* 右上角展开按钮 */
+.workspace-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: rgba(39, 39, 42, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0;
+    transition: background-color 0.2s;
+}
+
+.workspace-toggle:hover {
+    background-color: rgba(39, 39, 42, 0.95);
+}
+
+.workspace-toggle svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* 工作台头部 */
+.workspace-header {
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.workspace-header h2 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.close-workspace {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.close-workspace svg {
+    width: 20px;
+    height: 20px;
+    fill: rgba(255, 255, 255, 0.6);
+}
+
+/* 工作台内容 */
+.workspace-content {
+    padding: 24px;
+}
+
+.workspace-content h3 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 16px 0;
+}
+
+/* 文件占位区域 */
+.file-placeholder {
+    text-align: center;
+    padding: 48px 24px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.file-placeholder img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+}
+
+.file-placeholder p {
+    color: rgba(255, 255, 255, 0.6);
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.file-formats {
+    font-size: 12px !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+    line-height: 1.5;
+}
+
+/* 添加按钮激活状态样式 */
+.workspace-toggle.active {
+    background-color: rgba(39, 39, 42, 0.95);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #4B96F3; /* 激活时改变图标颜色 */
+}
+
+/* 聊天图标样式 */
+.chat-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+    opacity: 0.8;
+}
+
+/* 图标内的线条动画 */
+.chat-icon path:last-child {
+    stroke-dasharray: 50;
+    stroke-dashoffset: 0;
+    animation: drawLines 2s ease-in-out infinite;
+}
+
+@keyframes drawLines {
+    0% {
+        stroke-dashoffset: 50;
+    }
+    50% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: 50;
+    }
+}
+
+
+/* 优化工作台过渡效果 */
+.workspace-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100vh;
+    transition: right 0.3s ease;
+    z-index: 99;
+}
+
+/* 确保内容区域在工作台打开时仍然居中 */
+@media screen and (min-width: 1600px) {
+    .chat-container {
+        max-width: 1200px;
+    }
+}
+
+.conversation-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.conversation-title {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.conversation-title:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    opacity: 0.6;
+    transition: transform 0.2s;
+}
+
+.conversation-dropdown.active .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 200px;
+    background-color: #2d2d30;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 4px;
+    margin-top: 4px;
+    display: none;
+    z-index: 1000;
+}
+
+.conversation-dropdown.active .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-item svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    opacity: 0.8;
+}
+
+.dropdown-item.delete {
+    color: #ff4d4f;
+} 

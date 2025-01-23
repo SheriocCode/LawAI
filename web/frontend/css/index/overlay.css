@@ -1,0 +1,111 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+    z-index: 1000; /* 确保遮罩层在页面内容上方 */
+    display: none; /* 默认不显示 */
+}
+
+/* 遮罩层内容样式 */
+.history-modal-content {
+    position: relative;
+
+    background-color: #3e424d;
+    padding: 0px 20px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 100px auto; /* 垂直居中 */
+    overflow-y: auto; /* 启用垂直滚动 */
+    max-height: 80vh; /* 设置最大高度，防止内容过多时滚动条出现 */
+}
+
+.history-close {
+    position: absolute; 
+    top: 20px; /* 距离顶部的距离 */
+    right: 20px; /* 距离右侧的距离 */
+    font-size: 24px; /* 字体大小 */
+    color: #ee1d1da9; /* 字体颜色 */
+    cursor: pointer; /* 鼠标悬停时的光标样式 */
+    border-radius: 10px; /* 圆形边框 */
+    width: 40px; /* 盒子宽度 */
+    height: 40px; /* 盒子高度 */
+    display: flex; /* 使用Flexbox布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    background-color: #4e5360b8; /* 背景颜色 */
+    line-height: 1; /* 行高，确保垂直居中 */
+}
+
+.history-close:hover {
+    background-color: #ee1d1d65; /* 鼠标悬停时的背景颜色 */
+    color: #3e424d; /* 鼠标悬停时的字体颜色 */
+}
+
+.history-close:hover,
+.history-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+.history-search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: sticky; /* 固定搜索框 */
+    top: 0px; /* 距离顶部的距离 */
+    background-color: #3e424d; /* 背景颜色与模态框一致 */
+    z-index: 10; /* 确保搜索框在内容上方 */
+    padding: 10px 0; /* 垂直内边距 */
+}
+
+.history-search-icon {
+    width: 30px;
+    height: 30px;
+    fill: #789add; /* 调整图标颜色 */
+    margin-right: 10px; /* 图标与输入框之间的间距 */
+}
+
+.history-search-bar input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #5b708d65;
+    color: #789add;
+}
+
+.history-section {
+    margin-bottom: 20px;
+}
+
+.history-section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.history-conversation {
+    background-color: #4b5057;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.history-conversation .history-time {
+    font-size: 12px;
+}
+
+.history-conversation a {
+    color: #61aeee;
+    text-decoration: none;
+}

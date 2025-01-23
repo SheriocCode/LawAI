@@ -1,0 +1,52 @@
+:root {
+    --sidebar-bg: #1c1c1f;
+    --main-bg: #27272a;
+    --text-color: #ffffff;
+    --input-bg: rgba(255, 255, 255, 0.1);
+}
+/* 浏览器默认的选中文本样式 */
+::selection {
+    background-color: #b3d4fc97; /* 设置选中文本的背景色 */
+    /* color: #333; 设置选中文本的前景色 */
+    text-shadow: none; /* 某些浏览器默认会有文本阴影，这里重置 */
+}
+
+/* 全局滚动条样式 */
+::-webkit-scrollbar {
+    width: 0px; /* 滚动条滑块的宽度 */
+}
+
+/* 滚动条轨道 */
+::-webkit-scrollbar-track {
+    background: #942121; /* 轨道背景 */
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+    background: #888; /* 滑块背景 */
+    border-radius: 10px; /* 滑块圆角 */
+}
+
+/* 滚动条滑块在悬停时 */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* 滑块悬停背景 */
+}
+
+body {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; */
+    font-family: '宋体', sans-serif;
+    background-color: var(--main-bg);
+    color: var(--text-color);
+}
+html {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+

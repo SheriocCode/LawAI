@@ -1,0 +1,9 @@
+# 忽略.vscode目录
+.vscode/
+
+# 后端
+web/backend/.env
+
+# 前端
+web/demo/
+web/frontend/img/
