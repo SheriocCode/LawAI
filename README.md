@@ -2,24 +2,11 @@
 
 <div align="center">
   <a href="https://github.com/3051617781/LawAI">
-    <img width="15%" alt="favicon" src="https://github.com/user-attachments/assets/5bc185f0-aeec-4f75-88c5-61c46ce8fd23">
+    <img width="40%" alt="favicon" src="https://github.com/user-attachments/assets/374b3b6a-a5af-445f-ac18-3b566a6da6be">
   </a>
   <p align="center">
     <h3>法之昭昭，其路遥遥</h3>
-    <a href="https://github.com/3051617781/LawAI/graphs/contributors">
-        <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/3051617781/LawAI" />
-      </a>
-      <a href="https://github.com/3051617781/LawAI/issues">
-        <img alt="Issues" src="https://img.shields.io/github/issues/3051617781/LawAI?color=0088ff" />
-      </a>
-      <a href="https://github.com/3051617781/LawAI/pulls">
-        <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/3051617781/LawAI?color=0088ff" />
-      </a>
-      <a href="https://github.com/3051617781/LawAI/stargazers">
-        <img alt="GitHub stars" src="https://img.shields.io/github/stars/3051617781/LawAI?color=ccf" />
-      </a>
-      <br/>
-      <a href="https://huggingface.co/StarUniver/lawllm-gguf"><strong>HuggingFace</strong></a>
+    <a href="https://huggingface.co/StarUniver/lawllm-gguf"><strong>HuggingFace</strong></a>
   </p>
 </div>
 
