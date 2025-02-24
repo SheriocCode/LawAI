@@ -1,4 +1,4 @@
-# LawAI: A Large Language Model-based Legal Assistant Enhanced by RAG. 
+# LawAI——基于微调大模型的智能法律辅助决策与问答系统
 
 <div align="center">
   <a href="https://github.com/3051617781/LawAI">
