@@ -2,11 +2,10 @@
 
 <div align="center">
   <a href="https://github.com/3051617781/LawAI">
-    <img width="40%" alt="favicon" src="https://github.com/user-attachments/assets/374b3b6a-a5af-445f-ac18-3b566a6da6be">
+    <img width="40%" alt="favicon" src="https://github.com/user-attachments/assets/2cf7a9bb-8349-41b7-adb9-2c78abd8e0c1">
   </a>
   <p align="center">
     <h3>法之昭昭，其路遥遥</h3>
-    <a href="https://huggingface.co/StarUniver/lawllm-gguf"><strong>HuggingFace</strong></a>
   </p>
 </div>
 
@@ -20,6 +19,7 @@
 - **Enhancements**: Trained for non-professional legal knowledge Q&A (**2** hours of training).
 - **Limitation**:Limited support for Chinese and limited dataset (**8000** pairs of non-professional Q&A).
 
+<a href="https://huggingface.co/StarUniver/lawllm-gguf"><strong>HuggingFace</strong></a>
 
 # Introduction
 Large Language Models (LLMs) have demonstrated strong universality in various fields. However, in vertical domains such as the legal field, the performance of these large models often leaves much to be desired. The reason lies in the fact that the legal field involves a vast amount of professional knowledge, complex legal principles, and highly refined rules and practices. Relying solely on general-purpose large models makes it difficult to achieve the ideal effect of legal consulting services.
