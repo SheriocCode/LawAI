@@ -1,0 +1,6 @@
+[submodule "LawAI-frontend"]
+	path = LawAI-frontend
+	url = git@github.com:SheriocCode/LawAI-frontend.git
+[submodule "LawAI-backend"]
+	path = LawAI-backend
+	url = git@github.com:SheriocCode/LawAI-backend.git
