@@ -22,11 +22,11 @@ To compensate for this deficiency, we have decided to develop the LawAI model, f
 * Refined Learning: We have conducted refined training for the model, including the study of legal provisions, analysis of cases, understanding of legal principles, etc., to ensure that the model can accurately grasp the core essentials of the legal field.
 
 # LawAI Models
-## <a href="https://huggingface.co/StarUniver/Qwen-LawLLM">LawAI-Qwen</a>
+## <a href="https://huggingface.co/StarUniver/Qwen-LawLLM">LawAI-Qwen7b</a>
 - **Base Model**:Based on `Qwen7b`.
 - **Enhancements**: Significantly increased training data volume and rounds (about **2** days of training).
 - **Limitation**:Partial overfitting occurs(Caused by **2w** pairs of Q&A with **30** epochs of training).
-## <a href="https://huggingface.co/StarUniver/lawllm-gguf">LawAI-7B</a>
+## <a href="https://huggingface.co/StarUniver/lawllm-gguf">LawAI-llama3</a>
 - **Base Model**:Based on `llama3`.
 - **Enhancements**: Trained for non-professional legal knowledge Q&A (**2** hours of training).
 - **Limitation**:Limited support for Chinese and limited dataset (**8000** pairs of non-professional Q&A).
