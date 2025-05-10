@@ -1,13 +1,28 @@
-# LawAI——基于微调大模型的智能法律辅助决策与问答系统
+# 智法通鉴(LawAI)——司法大数据赋能的法律服务数智化平台(基于微调大模型的智能法律辅助决策与问答系统)
 
-<div align="center">
-  <a href="https://github.com/3051617781/LawAI">
-    <img width="40%" alt="favicon" src="https://github.com/user-attachments/assets/2cf7a9bb-8349-41b7-adb9-2c78abd8e0c1">
-  </a>
-  <p align="center">
-    <h3>法之昭昭，其路遥遥</h3>
-  </p>
-</div>
+<table style="margin: 0 auto;" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td align="center">
+            <img width="40%" alt="favicon" src="https://github.com/user-attachments/assets/0aea9753-ecd2-4918-a40c-966a2c987a08">
+            <div>法意思通明，智启新程</div>
+        </td>
+        <td align="center">
+            <img width="50%" alt="favicon" src="https://github.com/user-attachments/assets/2cf7a9bb-8349-41b7-adb9-2c78abd8e0c1">
+            <div>法之昭昭，其路遥遥</div>
+        </td>
+    </tr>
+</table>
+
+# Web
+<img width="1218" alt="1" src="https://github.com/user-attachments/assets/87479347-572d-4690-ba81-3497d328c8db" />
+<img width="1218" alt="2" src="https://github.com/user-attachments/assets/a1415cd2-799e-457f-971f-5bed86a4f448" />
+<img width="1218" alt="3" src="https://github.com/user-attachments/assets/2b90115c-589f-49f3-8c73-b59c211c64ed" />
+<img width="1218" alt="4" src="https://github.com/user-attachments/assets/4e6d364e-6c79-41ee-8e17-8930daf556dc" />
+<img width="1218" alt="5" src="https://github.com/user-attachments/assets/afd73ce5-3760-49ef-8531-3e6843e3eeec" />
+<img width="1218" alt="6" src="https://github.com/user-attachments/assets/6f082307-8157-431c-af3c-ff3e3f13975e" />
+<img width="1218" alt="7" src="https://github.com/user-attachments/assets/e7780e11-42fd-4088-95fe-1ae82b8c6ec6" />
+<img width="1218" alt="8" src="https://github.com/user-attachments/assets/b6c4d134-ecae-433f-bb0c-e2d8c6e9bcbd" />
+
 
 # LawAI Models
 ## <a href="https://huggingface.co/StarUniver/Qwen-LawLLM">LawAI-Qwen</a>
